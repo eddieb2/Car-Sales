@@ -37,7 +37,7 @@ Follow these steps for completing your project.
 - [x] Submit a Pull-Request to merge Branch into master (student's Repository).
 - [x] Add your team lead as a reviewer on the pull-request
 - [x] Your team lead will count the project as complete by merging the branch back into master.
-- [ ] Do your magic!
+- [x] Do your magic!
 
 # _Project - Car Sales_
 
@@ -50,10 +50,10 @@ Follow these steps for completing your project.
 
 **Step 1 - Planning 📝**
 
-- Take a good amount of time to familiarize yourself with the project structure. Figure out what data you have and where it's being used (Pen and paper or a whiteboard will be your best friend here!)
-- Plan out your state management structure as mentioned above. The only requirment is that you _must_ use Redux
-- Write out the steps you think you'll need to complete this project. It seems silly, but doing this with every project will help you grow into a better developer a lot faster.
-- Take note of the few comments throughout the app. They are there as little guides to nudge you in the right direction. You're welcome 😉
+- [x] Take a good amount of time to familiarize yourself with the project structure. Figure out what data you have and where it's being used (Pen and paper or a whiteboard will be your best friend here!)
+- [x] Plan out your state management structure as mentioned above. The only requirment is that you _must_ use Redux
+- [x] Write out the steps you think you'll need to complete this project. It seems silly, but doing this with every project will help you grow into a better developer a lot faster.
+- [x] Take note of the few comments throughout the app. They are there as little guides to nudge you in the right direction. You're welcome 😉
 
 **Step 2 - And... Action! 🎬**
 
@@ -68,7 +68,7 @@ write the reducer logic for the actions 👉 Rinse and repeat
 
 ## _MVP Requirements:_
 
-- Move the given state to the reducer as the initial state for the Redux store.
+- [x] Move the given state to the reducer as the initial state for the Redux store.
 - Set up the Redux flow
 - User should be able to add features to their car
 - User should be able to remove added features from their car
