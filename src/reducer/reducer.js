@@ -1,5 +1,5 @@
 import { ADD_FEATURE, REMOVE_FEATURE } from "../actions/actions";
-
+//26395
 export const initialState = {
   additionalPrice: 0,
   car: {
@@ -18,24 +18,30 @@ export const initialState = {
 };
 
 export const reducer = (state = initialState, action) => {
-  // console.log("STATE:", state);
-  console.log("FEATURES:", state.car.features);
-  console.log("payload", action.payload);
+  console.log(state.car.features);
   switch (action.type) {
+    //NOTE ADD //
     case ADD_FEATURE:
+      if (state.car.features.includes(action.payload)) {
+        return state;
+      }
       return {
         ...state,
+        additionalPrice: state.additionalPrice + action.payload.price,
         car: {
           ...state.car,
           features: [...state.car.features, action.payload]
         }
       };
+
+    //NOTE REMOVE //
     case REMOVE_FEATURE:
       const newFeatures = state.car.features.filter(item => {
         return item !== action.payload;
       });
       return {
         ...state,
+        additionalPrice: state.additionalPrice - action.payload.price,
         car: {
           ...state.car,
           features: newFeatures
@@ -45,3 +51,35 @@ export const reducer = (state = initialState, action) => {
       return state;
   }
 };
+
+// switch (action.type) {
+//   //NOTE ADD //
+//   case ADD_FEATURE:
+//     let newState = {
+//       ...state,
+//       car: {
+//         ...state.car,
+//         features: [...state.car.features, action.payload]
+//       }
+//     };
+//     let newTotal = 0;
+//     newState.car.features.forEach(item => {
+//       newTotal += item.price;
+//     });
+//     newState.additionalPrice = newTotal;
+//     return newState;
+//   //NOTE REMOVE //
+//   case REMOVE_FEATURE:
+//     const newFeatures = state.car.features.filter(item => {
+//       return item !== action.payload;
+//     });
+//     return {
+//       ...state,
+//       car: {
+//         ...state.car,
+//         features: newFeatures
+//       }
+//     };
+//   default:
+//     return state;
+// }
