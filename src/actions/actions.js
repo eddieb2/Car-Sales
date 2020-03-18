@@ -6,6 +6,6 @@ export const addFeature = newFeature => {
   return { type: ADD_FEATURE, payload: newFeature };
 };
 
-export const removeFeature = () => {
-  return { type: REMOVE_FEATURE };
+export const removeFeature = clickedFeature => {
+  return { type: REMOVE_FEATURE, payload: clickedFeature };
 };
